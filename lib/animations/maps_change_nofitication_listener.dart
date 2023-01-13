@@ -37,6 +37,11 @@ class _MapsChangeNotificationListenerState
               fit: BoxFit.cover,
             ),
           ),
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(percent),
+            ),
+          ),
           Positioned(
             top: 20,
             left: 20,
