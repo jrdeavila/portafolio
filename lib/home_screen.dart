@@ -24,6 +24,11 @@ class HomeScreen extends StatelessWidget {
                   builder: (_) => const SocialButtonShareAnimation())),
               child: const Text('Social Button share animation'),
             ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const BounceOutBottomBarAnimation())),
+              child: const Text("Bounce out bottom bar animation"),
+            ),
           ],
         ),
       ),
