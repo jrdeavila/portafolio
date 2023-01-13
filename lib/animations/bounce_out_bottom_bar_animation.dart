@@ -35,7 +35,6 @@ class _BounceOutBottomBarAnimationState
         ),
       ]),
       bottomNavigationBar: BounceOutBottomBar(
-        width: 300,
         initialIndex: currentIndex,
         items: const [
           Icons.home,
@@ -76,7 +75,6 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
   late int currentIndex;
   late Color _backgroundColor, _foregroundColor;
   late AnimationController _controller;
-  late double width;
   late Animation _animateIn,
       _animateOut,
       _circleAnimateItem,
@@ -89,7 +87,6 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
     currentIndex = widget.initialIndex;
     _backgroundColor = widget.backgroundColor;
     _foregroundColor = widget.foregroundColor;
-    width = widget.width ?? double.infinity;
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1000),
@@ -111,14 +108,14 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
 
     _elevAnimationIn = CurveTween(
       curve: const Interval(
-        0.3,
-        0.5,
+        0.1,
+        0.4,
         curve: Curves.decelerate,
       ),
     ).animate(_controller);
     _elevAnimationOut = CurveTween(
       curve: const Interval(
-        0.55,
+        0.45,
         1.0,
         curve: Curves.bounceOut,
       ),
@@ -126,8 +123,8 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
 
     _circleAnimateItem = CurveTween(
       curve: const Interval(
-        0.0,
-        0.5,
+        0.1,
+        0.4,
         curve: Curves.linear,
       ),
     ).animate(_controller);
@@ -145,6 +142,7 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     var currentWidth = width;
     var currentElevation = 0.0;
 

@@ -29,6 +29,11 @@ class HomeScreen extends StatelessWidget {
                   builder: (_) => const BounceOutBottomBarAnimation())),
               child: const Text("Bounce out bottom bar animation"),
             ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const MapsChangeNotificationListener())),
+              child: const Text("Maps Change Nofitification Listener"),
+            ),
           ],
         ),
       ),
