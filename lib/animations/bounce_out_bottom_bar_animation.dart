@@ -35,6 +35,7 @@ class _BounceOutBottomBarAnimationState
         ),
       ]),
       bottomNavigationBar: BounceOutBottomBar(
+        width: 300,
         initialIndex: currentIndex,
         items: const [
           Icons.home,
@@ -55,6 +56,7 @@ class BounceOutBottomBar extends StatefulWidget {
   final Color backgroundColor, foregroundColor;
   final int initialIndex;
   final ValueChanged<int> onIndexChanged;
+  final double? width;
   const BounceOutBottomBar({
     super.key,
     required this.items,
@@ -62,6 +64,7 @@ class BounceOutBottomBar extends StatefulWidget {
     this.foregroundColor = Colors.black,
     this.initialIndex = 0,
     required this.onIndexChanged,
+    this.width,
   });
 
   @override
@@ -73,6 +76,7 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
   late int currentIndex;
   late Color _backgroundColor, _foregroundColor;
   late AnimationController _controller;
+  late double width;
   late Animation _animateIn,
       _animateOut,
       _circleAnimateItem,
@@ -85,6 +89,7 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
     currentIndex = widget.initialIndex;
     _backgroundColor = widget.backgroundColor;
     _foregroundColor = widget.foregroundColor;
+    width = widget.width ?? double.infinity;
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1000),
@@ -140,7 +145,6 @@ class _BounceOutBottomBarState extends State<BounceOutBottomBar>
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
     var currentWidth = width;
     var currentElevation = 0.0;
 
@@ -217,7 +221,7 @@ class _CustomCirclePainter extends CustomPainter {
   _CustomCirclePainter({required this.progress, this.color = Colors.black});
 
   var stroke = 10.0;
-  var radius = 25.0;
+  var radius = 20.0;
   @override
   void paint(Canvas canvas, Size size) {
     var center = Offset(size.width / 2, size.height / 2);
