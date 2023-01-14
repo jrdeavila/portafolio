@@ -1,16 +1,5 @@
-# animation_examples
+# Flutter Examples about Animations and Project Views
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Social Button Share                                           | Bounce Out Button bar                                                     | Notification Listener Animation                                                 |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| <img src="./screenshots/social_button_share.gif" width="300"> | <img src="./screenshots/bounce_out_bottom_bar_animation.gif" width="300"> | <img src="./screenshots/notification_listener_animation_maps.gif" width="300" > |
