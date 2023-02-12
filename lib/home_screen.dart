@@ -34,6 +34,11 @@ class HomeScreen extends StatelessWidget {
                   builder: (_) => const MapsChangeNotificationListener())),
               child: const Text("Maps Change Nofitification Listener"),
             ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const BarberShopAnimation())),
+              child: const Text("Barber Shop Animation"),
+            ),
           ],
         ),
       ),
