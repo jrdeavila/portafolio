@@ -8,7 +8,7 @@ Tengo 21 años y soy un software developer.
 
 Es una aplicacion movil desarrollada en Flutter que permite realizar la gestion de empleados, cotizaciones de servicios y pago de liquidaciones a empleados de forma optima.
 
-Esta dirida a empresas de construccion cuyo objectivo es organizar el proceso de cotizacion de prestacion de servicios de manera rapida y conciza.
+Esta dirigida a empresas de construccion cuyo objectivo es organizar el proceso de cotizacion de prestacion de servicios de manera rapida y conciza.
 
 | Modulo de empleados                                               | Modulo de cotizaciones                                                  | Modulo de pagos de liquidaciones                                    |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
